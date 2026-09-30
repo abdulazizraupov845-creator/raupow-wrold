@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f0f0f">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+```
+<title>RAUPOWTube</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP HEADER
+===================================================== -->
+
+<header class="top-header" id="topHeader">
+
+```
+<div class="header-left">
+
+    <button
+        class="icon-button"
+        id="menuButton"
+        aria-label="Menu">
+        ☰
+    </button>
+
+    <a href="#" class="brand" id="brandButton">
+
+        <span class="brand-play">▶</span>
+
+        <span class="brand-text">
+            RAUPOW<span>Tube</span>
+        </span>
+
+    </a>
+
+</div>
+
+
+<form class="search-form" id="searchForm">
+
+    <input
+        type="search"
+        id="searchInput"
+        placeholder="Qidirish"
+        autocomplete="off"
+        spellcheck="false"
+    >
+
+    <button
+        type="submit"
+        class="search-button"
+        aria-label="Qidirish">
+        🔍
+    </button>
+
+    <button
+        type="button"
+        class="voice-button"
+        id="voiceButton"
+        aria-label="Ovozli qidiruv">
+        🎙️
+    </button>
+
+</form>
+
+
+<div class="header-right">
+
+    <button
+        class="icon-button"
+        id="createButton"
+        title="Create">
+        ＋
+    </button>
+
+    <button
+        class="icon-button"
+        id="notificationButton"
+        title="Notifications">
+        🔔
+        <span class="notification-dot"></span>
+    </button>
+
+    <button
+        class="profile-button"
+        id="profileButton"
+        title="Profile">
+        👤
+    </button>
+
+</div>
+```
+
+</header>
+
+<!-- =====================================================
+     MAIN APP
+===================================================== -->
+
+<div class="app-layout">
+
+```
+<!-- =================================================
+     SIDEBAR
+================================================== -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-scroll">
+
+
+        <nav class="sidebar-section">
+
+            <button
+                class="sidebar-item active"
+                data-page="home">
+
+                <span class="sidebar-icon">🏠</span>
+                <span class="sidebar-text">Bosh sahifa</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="shorts">
+
+                <span class="sidebar-icon">🎬</span>
+                <span class="sidebar-text">Shorts</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="subscriptions">
+
+                <span class="sidebar-icon">📺</span>
+                <span class="sidebar-text">Obunalar</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-line"></div>
+
+
+        <nav class="sidebar-section">
+
+            <div class="sidebar-heading">
+                Siz
+            </div>
+
+
+            <button
+                class="sidebar-item"
+                data-page="history">
+
+                <span class="sidebar-icon">🕘</span>
+                <span class="sidebar-text">Tarix</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="playlists">
+
+                <span class="sidebar-icon">📚</span>
+                <span class="sidebar-text">Playlistlar</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="saved">
+
+                <span class="sidebar-icon">💾</span>
+                <span class="sidebar-text">Saqlanganlar</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="liked">
+
+                <span class="sidebar-icon">👍</span>
+                <span class="sidebar-text">Yoqtirganlar</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-line"></div>
+
+
+        <nav class="sidebar-section">
+
+            <div class="sidebar-heading">
+                Eng ko‘p ko‘riladigan
+            </div>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="music">
+
+                <span class="sidebar-icon">🎵</span>
+                <span class="sidebar-text">Musiqa</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="gaming">
+
+                <span class="sidebar-icon">🎮</span>
+                <span class="sidebar-text">Gaming</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="news">
+
+                <span class="sidebar-icon">📰</span>
+                <span class="sidebar-text">Yangiliklar</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="sports">
+
+                <span class="sidebar-icon">⚽</span>
+                <span class="sidebar-text">Sport</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="technology">
+
+                <span class="sidebar-icon">💻</span>
+                <span class="sidebar-text">Texnologiya</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="movies">
+
+                <span class="sidebar-icon">🎬</span>
+                <span class="sidebar-text">Filmlar</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item category-item"
+                data-query="education">
+
+                <span class="sidebar-icon">🎓</span>
+                <span class="sidebar-text">Ta’lim</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-line"></div>
+
+
+        <nav class="sidebar-section">
+
+            <div class="sidebar-heading">
+                Boshqa
+            </div>
+
+
+            <button
+                class="sidebar-item"
+                data-page="trending">
+
+                <span class="sidebar-icon">🔥</span>
+                <span class="sidebar-text">Trend</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="channels">
+
+                <span class="sidebar-icon">👥</span>
+                <span class="sidebar-text">Kanallar</span>
+
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                data-page="settings">
+
+                <span class="sidebar-icon">⚙️</span>
+                <span class="sidebar-text">Sozlamalar</span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-line"></div>
+
+
+        <div class="sidebar-footer">
+
+            <div>RAUPOWTube</div>
+
+            <span>
+                Real YouTube Search
+            </span>
+
+            <small>
+                © 2026 RAUPOW
+            </small>
+
+        </div>
+
+
+    </div>
+
+</aside>
+
+
+<!-- =================================================
+     MAIN CONTENT
+================================================== -->
+
+<main class="main-content" id="mainContent">
+
+
+    <!-- =============================================
+         CATEGORY BAR
+    ============================================== -->
+
+    <div class="category-bar" id="categoryBar">
+
+        <button
+            class="category-chip active"
+            data-query="">
+            Hammasi
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="music">
+            Musiqa
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="gaming">
+            Gaming
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="live">
+            Live
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="football">
+            Futbol
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="coding">
+            Dasturlash
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="technology">
+            Technology
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="news">
+            Yangiliklar
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="movies">
+            Filmlar
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="education">
+            Ta’lim
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="podcast">
+            Podcast
+        </button>
+
+
+        <button
+            class="category-chip"
+            data-query="travel">
+            Travel
+        </button>
+
+    </div>
+
+
+    <!-- =============================================
+         HOME PAGE
+    ============================================== -->
+
+    <section
+        class="page-section"
+        id="homePage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1 id="pageTitle">
+                    Bosh sahifa
+                </h1>
+
+                <p id="pageSubtitle">
+                    YouTube videolarini qidiring
+                </p>
+
+            </div>
+
+
+            <div class="toolbar-actions">
+
+                <button
+                    class="toolbar-button"
+                    id="refreshButton">
+                    ↻ Yangilash
+                </button>
+
+
+                <button
+                    class="toolbar-button"
+                    id="filterButton">
+                    ☷ Filter
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             FILTER PANEL
+        ========================================== -->
+
+        <div
+            class="filter-panel hidden"
+            id="filterPanel">
+
+
+            <div class="filter-row">
+
+                <div class="filter-group">
+
+                    <label for="sortSelect">
+                        Tartiblash
+                    </label>
+
+                    <select id="sortSelect">
+
+                        <option value="relevance">
+                            Mosligi
+                        </option>
+
+                        <option value="date">
+                            Eng yangi
+                        </option>
+
+                        <option value="viewCount">
+                            Ko‘rishlar
+                        </option>
+
+                        <option value="rating">
+                            Reyting
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="durationSelect">
+                        Davomiyligi
+                    </label>
+
+                    <select id="durationSelect">
+
+                        <option value="any">
+                            Hammasi
+                        </option>
+
+                        <option value="short">
+                            Qisqa
+                        </option>
+
+                        <option value="medium">
+                            O‘rta
+                        </option>
+
+                        <option value="long">
+                            Uzun
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="dateSelect">
+                        Sana
+                    </label>
+
+                    <select id="dateSelect">
+
+                        <option value="any">
+                            Istalgan vaqt
+                        </option>
+
+                        <option value="hour">
+                            Oxirgi soat
+                        </option>
+
+                        <option value="today">
+                            Bugun
+                        </option>
+
+                        <option value="week">
+                            Shu hafta
+                        </option>
+
+                        <option value="month">
+                            Shu oy
+                        </option>
+
+                        <option value="year">
+                            Shu yil
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="apply-filter-button"
+                    id="applyFilterButton">
+
+                    Qo‘llash
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             SEARCH STATUS
+        ========================================== -->
+
+        <div
+            class="search-status hidden"
+            id="searchStatus">
+
+            <span id="searchStatusText">
+                Qidirilmoqda...
+            </span>
+
+        </div>
+
+
+        <!-- =========================================
+             LOADING
+        ========================================== -->
+
+        <div
+            class="loading-container hidden"
+            id="loadingContainer">
+
+            <div class="loading-spinner"></div>
+
+            <div class="loading-text">
+                YouTube videolari yuklanmoqda...
+            </div>
+
+            <div class="loading-subtext">
+                Bir oz kuting
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             ERROR
+        ========================================== -->
+
+        <div
+            class="error-container hidden"
+            id="errorContainer">
+
+            <div class="error-icon">
+                ⚠️
+            </div>
+
+            <h2 id="errorTitle">
+                Xatolik
+            </h2>
+
+            <p id="errorMessage">
+                YouTube bilan bog‘lanib bo‘lmadi.
+            </p>
+
+            <button
+                id="retryButton"
+                class="retry-button">
+
+                Qayta urinish
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================================
+             EMPTY
+        ========================================== -->
+
+        <div
+            class="empty-container hidden"
+            id="emptyContainer">
+
+            <div class="empty-icon">
+                🔎
+            </div>
+
+            <h2>
+                Hech narsa topilmadi
+            </h2>
+
+            <p>
+                Boshqa qidiruv so‘zini sinab ko‘ring.
+            </p>
+
+        </div>
+
+
+        <!-- =========================================
+             VIDEO GRID
+        ========================================== -->
+
+        <div
+            class="video-grid"
+            id="videoGrid">
+        </div>
+
+
+        <!-- =========================================
+             LOAD MORE
+        ========================================== -->
+
+        <div
+            class="load-more-container hidden"
+            id="loadMoreContainer">
+
+            <button
+                class="load-more-button"
+                id="loadMoreButton">
+
+                <span>
+                    Ko‘proq videolar
+                </span>
+
+                <span>
+                    ↓
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         VIDEO PLAYER PAGE
+    ============================================== -->
+
+    <section
+        class="watch-page hidden"
+        id="watchPage">
+
+
+        <button
+            class="back-button"
+            id="backButton">
+
+            ← Orqaga
+
+        </button>
+
+
+        <div class="watch-layout">
+
+
+            <!-- =====================================
+                 PLAYER
+            ====================================== -->
+
+            <div class="watch-main">
+
+
+                <div class="youtube-player-container">
+
+                    <iframe
+                        id="youtubePlayer"
+                        src=""
+                        title="RAUPOWTube Player"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share
+                        "
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+
+                <!-- VIDEO TITLE -->
+
+                <h1
+                    class="watch-title"
+                    id="watchTitle">
+
+                    Video nomi
+
+                </h1>
+
+
+                <!-- VIDEO META -->
+
+                <div
+                    class="watch-meta"
+                    id="watchMeta">
+
+                </div>
+
+
+                <!-- ACTION BAR -->
+
+                <div class="watch-actions">
+
+
+                    <button
+                        class="watch-action"
+                        id="likeVideoButton">
+
+                        <span>👍</span>
+                        <span id="likeText">
+                            Like
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="watch-action"
+                        id="dislikeVideoButton">
+
+                        👎
+
+                    </button>
+
+
+                    <button
+                        class="watch-action"
+                        id="saveVideoButton">
+
+                        <span>💾</span>
+
+                        <span id="saveText">
+                            Saqlash
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="watch-action"
+                        id="shareVideoButton">
+
+                        🔗
+                        Ulashish
+
+                    </button>
+
+
+                    <button
+                        class="watch-action"
+                        id="youtubeOriginalButton">
+
+                        ▶
+                        YouTube
+
+                    </button>
+
+
+                    <button
+                        class="watch-action"
+                        id="moreVideoButton">
+
+                        ⋮
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- CHANNEL -->
+
+                <div class="channel-box">
+
+
+                    <div
+                        class="channel-avatar"
+                        id="watchChannelAvatar">
+
+                        ▶
+
+                    </div>
+
+
+                    <div class="channel-details">
+
+                        <h3 id="watchChannelName">
+                            Kanal
+                        </h3>
+
+                        <span id="watchChannelSubscribers">
+                            YouTube Channel
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="subscribe-button"
+                        id="subscribeButton">
+
+                        Obuna bo‘lish
+
+                    </button>
+
+                </div>
+
+
+                <!-- DESCRIPTION -->
+
+                <div
+                    class="description-box"
+                    id="descriptionBox">
+
+
+                    <div class="description-meta">
+
+                        <span id="descriptionViews">
+                            0 views
+                        </span>
+
+                        <span id="descriptionDate">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <p id="descriptionText">
+                        Video tavsifi
+                    </p>
+
+
+                    <button
+                        class="description-more"
+                        id="descriptionMoreButton">
+
+                        ...ko‘proq
+
+                    </button>
+
+                </div>
+
+
+                <!-- COMMENTS UI -->
+
+                <section class="comments-section">
+
+
+                    <div class="comments-header">
+
+                        <h2>
+                            💬 Izohlar
+                        </h2>
+
+                        <span id="commentsCount">
+                            —
+                        </span>
+
+                    </div>
+
+
+                    <div class="comment-login-info">
+
+                        <div class="comment-avatar">
+                            👤
+                        </div>
+
+                        <input
+                            type="text"
+                            id="commentInput"
+                            placeholder="Izoh qo‘shing..."
+                            disabled
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="comments-message"
+                        id="commentsMessage">
+
+                        Izohlar uchun YouTube hisobiga
+                        kirish talab qilinadi.
+
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+
+            <!-- =====================================
+                 RELATED VIDEOS
+            ====================================== -->
+
+            <aside class="related-sidebar">
+
+
+                <h2>
+                    Keyingi videolar
+                </h2>
+
+
+                <div
+                    id="relatedVideos"
+                    class="related-videos">
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         HISTORY PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="historyPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    Tarix
+                </h1>
+
+                <p>
+                    Ko‘rgan videolaringiz
+                </p>
+
+            </div>
+
+
+            <button
+                class="toolbar-button danger"
+                id="clearHistoryButton">
+
+                🗑 Tozalash
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="video-grid"
+            id="historyGrid">
+
+        </div>
+
+
+        <div
+            class="empty-container hidden"
+            id="historyEmpty">
+
+            <div class="empty-icon">
+                🕘
+            </div>
+
+            <h2>
+                Tarix bo‘sh
+            </h2>
+
+            <p>
+                Ko‘rgan videolaringiz shu yerda paydo bo‘ladi.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         SAVED PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="savedPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    Saqlanganlar
+                </h1>
+
+                <p>
+                    Keyin ko‘rish uchun saqlangan videolar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="video-grid"
+            id="savedGrid">
+
+        </div>
+
+
+        <div
+            class="empty-container hidden"
+            id="savedEmpty">
+
+            <div class="empty-icon">
+                💾
+            </div>
+
+            <h2>
+                Saqlangan videolar yo‘q
+            </h2>
+
+            <p>
+                Videoni ochib “Saqlash” tugmasini bosing.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         LIKED PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="likedPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    Yoqtirgan videolar
+                </h1>
+
+                <p>
+                    Sizga yoqqan videolar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="video-grid"
+            id="likedGrid">
+
+        </div>
+
+
+        <div
+            class="empty-container hidden"
+            id="likedEmpty">
+
+            <div class="empty-icon">
+                👍
+            </div>
+
+            <h2>
+                Like qilingan video yo‘q
+            </h2>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         TRENDING PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="trendingPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    🔥 Trend
+                </h1>
+
+                <p>
+                    Mashhur videolar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="video-grid"
+            id="trendingGrid">
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         SHORTS PAGE
+    ============================================== -->
+
+    <section
+        class="shorts-page hidden"
+        id="shortsPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    🎬 Shorts
+                </h1>
+
+                <p>
+                    Qisqa videolar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="shorts-grid"
+            id="shortsGrid">
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         CHANNELS PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="channelsPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    👥 Kanallar
+                </h1>
+
+                <p>
+                    YouTube kanallarini qidiring
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form
+            class="channel-search"
+            id="channelSearchForm">
+
+            <input
+                type="search"
+                id="channelSearchInput"
+                placeholder="Kanal qidirish..."
+            >
+
+            <button type="submit">
+                🔍
+            </button>
+
+        </form>
+
+
+        <div
+            class="channels-grid"
+            id="channelsGrid">
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         PLAYLIST PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="playlistsPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    📚 Playlistlar
+                </h1>
+
+                <p>
+                    Saqlangan playlistlar
+                </p>
+
+            </div>
+
+
+            <button
+                class="toolbar-button"
+                id="createPlaylistButton">
+
+                ＋ Playlist
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="playlist-grid"
+            id="playlistGrid">
+
+        </div>
+
+
+        <div
+            class="empty-container"
+            id="playlistEmpty">
+
+            <div class="empty-icon">
+                📚
+            </div>
+
+            <h2>
+                Playlist yo‘q
+            </h2>
+
+            <p>
+                Keyingi bosqichda playlist tizimini
+                kengaytirish mumkin.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         SUBSCRIPTIONS PAGE
+    ============================================== -->
+
+    <section
+        class="page-section hidden"
+        id="subscriptionsPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    📺 Obunalar
+                </h1>
+
+                <p>
+                    Obuna bo‘lgan kanallaringiz
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="subscription-list"
+            id="subscriptionList">
+
+        </div>
+
+
+        <div
+            class="empty-container"
+            id="subscriptionEmpty">
+
+            <div class="empty-icon">
+                📺
+            </div>
+
+            <h2>
+                Obunalar yo‘q
+            </h2>
+
+            <p>
+                Haqiqiy YouTube subscription boshqaruvi
+                YouTube OAuth login talab qiladi.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =============================================
+         SETTINGS PAGE
+    ============================================== -->
+
+    <section
+        class="settings-page hidden"
+        id="settingsPage">
+
+
+        <div class="page-toolbar">
+
+            <div>
+
+                <h1>
+                    ⚙️ Sozlamalar
+                </h1>
+
+                <p>
+                    RAUPOWTube sozlamalari
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="settings-card">
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <strong>
+                        Dark mode
+                    </strong>
+
+                    <p>
+                        Qorong‘i dizayn
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="setting-toggle"
+                    id="darkModeToggle">
+
+                    🌙
+
+                </button>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <strong>
+                        Til
+                    </strong>
+
+                    <p>
+                        Interfeys tili
+                    </p>
+
+                </div>
+
+
+                <select id="languageSelect">
+
+                    <option value="uz">
+                        O‘zbekcha
+                    </option>
+
+                    <option value="ru">
+                        Русский
+                    </option>
+
+                    <option value="en">
+                        English
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="setting-row">
+
+                <div>
+
+                    <strong>
+                        Avtomatik ijro
+                    </strong>
+
+                    <p>
+                        Keyingi videoni avtomatik ochish
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="setting-toggle"
+                    id="autoplayToggle">
+
+                    ON
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+```
+
+</div>
+
+<!-- =====================================================
+     MOBILE BOTTOM NAV
+====================================================== -->
+
+<nav class="mobile-bottom-nav">
+
+```
+<button
+    class="mobile-nav-item active"
+    data-page="home">
+
+    <span>🏠</span>
+    <small>Home</small>
+
+</button>
+
+
+<button
+    class="mobile-nav-item"
+    data-page="shorts">
+
+    <span>🎬</span>
+    <small>Shorts</small>
+
+</button>
+
+
+<button
+    class="mobile-create"
+    id="mobileCreateButton">
+
+    ＋
+
+</button>
+
+
+<button
+    class="mobile-nav-item"
+    data-page="subscriptions">
+
+    <span>📺</span>
+    <small>Obuna</small>
+
+</button>
+
+
+<button
+    class="mobile-nav-item"
+    data-page="profile">
+
+    <span>👤</span>
+    <small>Siz</small>
+
+</button>
+```
+
+</nav>
+
+<!-- =====================================================
+     PROFILE MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay hidden"
+    id="profileModal">
+
+```
+<div class="modal profile-modal">
+
+
+    <button
+        class="modal-close"
+        data-close-modal="profileModal">
+
+        ×
+
+    </button>
+
+
+    <div class="profile-big-avatar">
+        👤
+    </div>
+
+
+    <h2>
+        RAUPOWTube
+    </h2>
+
+
+    <p>
+        YouTube-style video platform
+    </p>
+
+
+    <button
+        class="modal-primary"
+        id="youtubeLoginButton">
+
+        🔐 YouTube bilan kirish
+
+    </button>
+
+
+    <p class="modal-note">
+        Haqiqiy YouTube akkaunt funksiyalari OAuth
+        orqali ishlaydi.
+    </p>
+
+
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     NOTIFICATION MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay hidden"
+    id="notificationModal">
+
+```
+<div class="modal notification-modal">
+
+
+    <button
+        class="modal-close"
+        data-close-modal="notificationModal">
+
+        ×
+
+    </button>
+
+
+    <h2>
+        🔔 Bildirishnomalar
+    </h2>
+
+
+    <div class="notification-empty">
+
+        <div>
+            🔕
+        </div>
+
+        <p>
+            Hozircha yangi bildirishnoma yo‘q.
+        </p>
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     CREATE MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay hidden"
+    id="createModal">
+
+```
+<div class="modal">
+
+
+    <button
+        class="modal-close"
+        data-close-modal="createModal">
+
+        ×
+
+    </button>
+
+
+    <h2>
+        ＋ Yaratish
+    </h2>
+
+
+    <div class="create-options">
+
+
+        <button class="create-option">
+
+            🎥
+            <span>
+                Video yuklash
+            </span>
+
+        </button>
+
+
+        <button class="create-option">
+
+            📡
+            <span>
+                Live boshlash
+            </span>
+
+        </button>
+
+
+        <button class="create-option">
+
+            📚
+            <span>
+                Playlist yaratish
+            </span>
+
+        </button>
+
+
+    </div>
+
+
+    <p class="modal-note">
+        YouTube'ga haqiqiy video yuklash uchun
+        YouTube OAuth va backend kerak bo‘ladi.
+    </p>
+
+
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     SHARE MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay hidden"
+    id="shareModal">
+
+```
+<div class="modal share-modal">
+
+
+    <button
+        class="modal-close"
+        data-close-modal="shareModal">
+
+        ×
+
+    </button>
+
+
+    <h2>
+        🔗 Ulashish
+    </h2>
+
+
+    <div class="share-url">
+
+        <input
+            id="shareUrlInput"
+            readonly
+        >
+
+        <button
+            id="copyShareButton">
+
+            Nusxalash
+
+        </button>
+
+    </div>
+
+
+    <div class="share-buttons">
+
+        <button id="telegramShareButton">
+            Telegram
+        </button>
+
+        <button id="whatsappShareButton">
+            WhatsApp
+        </button>
+
+        <button id="facebookShareButton">
+            Facebook
+        </button>
+
+    </div>
+
+
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     VIDEO MORE MENU
+====================================================== -->
+
+<div
+    class="context-menu hidden"
+    id="videoContextMenu">
+
+```
+<button id="contextSaveButton">
+    💾 Saqlash
+</button>
+
+
+<button id="contextShareButton">
+    🔗 Ulashish
+</button>
+
+
+<button id="contextCopyButton">
+    📋 Linkni nusxalash
+</button>
+
+
+<button id="contextOpenYoutubeButton">
+    ▶ YouTube'da ochish
+</button>
+```
+
+</div>
+
+<!-- =====================================================
+     TOAST
+====================================================== -->
+
+<div
+    class="toast"
+    id="toast">
+
+```
+<span id="toastIcon">
+    ✓
+</span>
+
+<span id="toastText">
+    Tayyor
+</span>
+```
+
+</div>
+
+<!-- =====================================================
+     FULLSCREEN SEARCH OVERLAY
+====================================================== -->
+
+<div
+    class="search-overlay hidden"
+    id="searchOverlay">
+
+```
+<div class="search-overlay-inner">
+
+
+    <button
+        class="search-overlay-close"
+        id="searchOverlayClose">
+
+        ←
+
+    </button>
+
+
+    <input
+        type="search"
+        id="mobileSearchInput"
+        placeholder="YouTube'dan qidirish..."
+        autocomplete="off"
+    >
+
+
+    <button
+        id="mobileSearchButton">
+
+        🔍
+
+    </button>
+
+
+</div>
+
+
+<div
+    class="search-suggestions"
+    id="searchSuggestions">
+
+</div>
+```
+
+</div>
+
+<!-- =====================================================
+     API WARNING
+====================================================== -->
+
+<div
+    class="api-warning hidden"
+    id="apiWarning">
+
+```
+<div class="api-warning-icon">
+    🔑
+</div>
+
+
+<div>
+
+    <strong>
+        YouTube API key kerak
+    </strong>
+
+    <p>
+        script.js ichidagi API_KEY qiymatiga
+        YouTube Data API v3 kalitingizni kiriting.
+    </p>
+
+</div>
+
+
+<button
+    id="closeApiWarning">
+
+    ×
+
+</button>
+```
+
+</div>
+
+<!-- =====================================================
+     SCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
