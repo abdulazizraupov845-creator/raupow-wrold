@@ -7,7 +7,7 @@
    ========================================================= */
 
 const CONFIG = {
-    API_KEY: "AIzaSyB5qcnsqJeYpBGQdnCMNAsTaYPEPrJqSI8",
+    API_KEY: "AIzaSyBsi4AExeC_hMrZBaItVimX4APUvIuK8l8",
     API_URL: "https://www.googleapis.com/youtube/v3",
     REGION_CODE: "us",
     MAX_RESULTS: 24,
